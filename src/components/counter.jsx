@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 
 class Counter extends Component{
-
+  /*@description
+  */
   getBadgeClasses(){
     let classes = "badge m-2 ";
     classes += (this.props.counter.value === 0) ? "badge-warning" : "badge-primary";
