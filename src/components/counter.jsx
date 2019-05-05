@@ -1,24 +1,23 @@
 import React, {Component} from "react";
 
 class Counter extends Component{
-  state = {
-    value:this.props.counter.value,
-    tags: ['tag1','tag2','tag3']
-  };
+
   getBadgeClasses(){
     let classes = "badge m-2 ";
-    classes += (this.state.value === 0) ? "badge-warning" : "badge-primary";
+    classes += (this.props.counter.value === 0) ? "badge-warning" : "badge-primary";
     return classes
   }
 
+  formatCount(){
+    const value= this.props.counter.value;
 
-  handleIncrement = (evt) => {
-    console.log("Increment clicked",evt)
-    this.setState({value: this.state.value + 1})
+    return value === 0 ? "Zero" : value;
+
   }
 
+
   render(){
-    console.log("prop",this.props.children)
+
     return (
 
             <div>
@@ -26,24 +25,18 @@ class Counter extends Component{
               {this.props.children}
               <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
               <button
-                  onClick={() => this.handleIncrement({id:1})}
+                  onClick={() => this.props.onIncrement(this.props.counter.value)}
                   className="btn btn-secondary btn-sm"
               >
                 Increment
               </button>
               <button onClick={this.props.onDelete} className="button btn-danger btn-sm m-2">Delete</button>
-              <ul>
-                {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
-              </ul>
+
             </div>
            );
   }
 
-  formatCount(){
-    const {value} = this.state;
-    return value === 0 ? "Zero" : value;
 
-  }
 
 }
 
