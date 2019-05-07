@@ -1,17 +1,20 @@
 .App {
   text-align: center;
 }
+#message{
+  color:transparent;
+  font-size: 50px;
+}
 #container_counters{
   z-index:0;
 }
-#Cover{
-  z-index: 12;
+#cover{
+  z-index: -1;
   background: gray;
-  opacity: 1%;
-  width: 100px;
-  height: 100px;
-
-   position: absolute ;
+  opacity: 0.5;
+  width: 150%;
+  height: 150%;
+  position: absolute ;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
