@@ -23,6 +23,7 @@ class Counter extends Component{
             <div>
 
               {this.props.children}
+              <p><img src={this.props.url}></img></p>
               <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
               <button
                   onClick={() => this.props.onIncrement(this.props.counter.value)}
@@ -30,6 +31,7 @@ class Counter extends Component{
               >
                 Increment
               </button>
+
               <button onClick={this.props.onDelete} className="button btn-danger btn-sm m-2">Delete</button>
 
             </div>
