@@ -1,5 +1,6 @@
-Source:
-https://codewithmosh.com/p/mastering-react
+# Udacity-portfolio-project
+This repository was a part of the React course of Code with Mosh
+(https://codewithmosh.com/p/mastering-react)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
