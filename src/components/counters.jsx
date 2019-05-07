@@ -30,16 +30,14 @@ class Counters extends Component{
     this.setState({counters});
   }
   handleReset = () => {
-    let counters =[
-      {id:1,value:5},
-      {id:2,value:0},
-      {id:3,value:4},
-      {id:4,value:0}]
+    let counters = [...this.state.counters];
+    counters.map(c=>c.value=0);
     this.setState({counters});
   };
   render(){
     return (<div className="container">
               <button onClick={this.handleReset} className="btn btn-primary btn-sm m-2">Reset</button>
+              <div className="row">
               {this.state.counters.map(counter =>(
                 <Counter
                   key={counter.id}
@@ -53,6 +51,7 @@ class Counters extends Component{
                 </Counter>
 
             ))}
+              </div>
             </div>
 
     )

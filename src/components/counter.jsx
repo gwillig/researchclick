@@ -20,7 +20,7 @@ class Counter extends Component{
 
     return (
 
-            <div>
+            <div className="col-sm">
 
               {this.props.children}
               <p><img src={this.props.url}></img></p>
