@@ -22,7 +22,7 @@ class Counter extends Component{
 
             <div className="col-sm">
               {this.props.children}
-              <p><img src={this.props.url}></img></p>
+              <p><img onClick={() => this.props.onIncrement(this.props.counter.value)}  src={this.props.url}></img></p>
               <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
               <button
                   onClick={() => this.props.onIncrement(this.props.counter.value)}
