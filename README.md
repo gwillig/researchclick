@@ -1,5 +1,6 @@
-# Udacity-portfolio-project
-This repository was a part of the React course of Code with Mosh
+# Reasearch Project: Is there a correlation  what people click ?
+
+
 (https://codewithmosh.com/p/mastering-react)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
