@@ -40,7 +40,22 @@ class Counters extends Component{
       console.log("asd")
     document.querySelector("#cover").style.zIndex=12
     document.querySelector("#message").style.color="black"
-  },3000)
+    let response = {};
+    let test = {test:1}
+
+    // document.querySelectorAll("span").forEach((element,i) => {
+    //     response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
+    // })
+    // fetch("http://127.0.0.1:8000/response",
+    // {   mode: 'cors',
+    //     method: "POST",
+    //     body: JSON.stringify(response),
+    //     contentType: 'application/json',
+    // })
+    // .then(function(res){ return res.json(); })
+    // .then(function(data){ alert( JSON.stringify( data ) ) })
+
+  },9000)
   }
   render(){
     return (<div id="container_counters" className="container">
