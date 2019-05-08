@@ -34,34 +34,9 @@ class Counters extends Component{
     counters.map(c=>c.value=0);
     this.setState({counters});
   };
-  setSlider = () => {
 
-    setTimeout(function(){
-      console.log("asd")
-    document.querySelector("#cover").style.zIndex=12
-    document.querySelector("#message").style.color="black"
-    let response = {};
-    let test = {test:1}
-
-    // document.querySelectorAll("span").forEach((element,i) => {
-    //     response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
-    // })
-    // fetch("http://127.0.0.1:8000/response",
-    // {   mode: 'cors',
-    //     method: "POST",
-    //     body: JSON.stringify(response),
-    //     contentType: 'application/json',
-    // })
-    // .then(function(res){ return res.json(); })
-    // .then(function(data){ alert( JSON.stringify( data ) ) })
-
-  },9000)
-  }
   render(){
     return (<div id="container_counters" className="container">
-            <div id="cover" onLoad={this.setSlider()}>
-                <p id="message">Thanks for your help</p>
-            </div>
               <button onClick={this.handleReset} className="btn btn-primary btn-sm m-2">Reset</button>
               <div className="row">
               {this.state.counters.map(counter =>(
