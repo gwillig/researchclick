@@ -14,7 +14,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
+  "engines":{
+    "node":"10.15.3",
+    "npm":"6.4.1"
+  },
+  "eslintConfig":{
     "extends": "react-app"
   },
   "browserslist": {
