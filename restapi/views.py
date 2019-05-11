@@ -10,6 +10,7 @@ from django.utils.decorators import method_decorator
 
 
 @method_decorator(csrf_exempt)
+@csrf_exempt
 def result(request):
     data = request.body
     convert = data.decode("utf-8")
