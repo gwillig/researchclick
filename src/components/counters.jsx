@@ -8,7 +8,7 @@ class Counters extends Component{
     counters:[
       {id:1,value:0,url:"https://source.unsplash.com/owFmHMC4QAI///300x300"},
       {id:2,value:0,url:"https://source.unsplash.com/7uoMmzPd2JA///300x300"},
-      {id:3,value:0,url:"https://source.unsplash.com/Gv2t5q_LnwA///300x300"},
+      {id:3,value:0,url:"https://source.unsplash.com/XShgTPsoATU///300x300"},
       {id:4,value:0,url:"https://source.unsplash.com/zBbY7VaUiqU///300x300"},
       {id:5,value:0,url:"https://source.unsplash.com/5INN0oj12u4///300x300"},
       {id:5,value:0,url:"https://source.unsplash.com/wOGhHamMqLc///300x300"}
