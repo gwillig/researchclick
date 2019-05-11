@@ -2,12 +2,10 @@ from django.shortcuts import render
 import datetime
 
 from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 import json
 from restapi.models import Choice
 from django.utils.decorators import method_decorator
-
-
+from django.views.decorators.csrf import csrf_exempt
 
 @method_decorator(csrf_exempt)
 @csrf_exempt
