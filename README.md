@@ -1,7 +1,8 @@
 # Reasearch Project: Is there a correlation  what people click ?
 
-
-(https://codewithmosh.com/p/mastering-react)
+The goal of this project is to collect data to answer the question if there is 
+a is different in the click behavior of people dependent on day time
+(https://codewithmosh.com/p/mastering-react). This app is hosted on heroin.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
