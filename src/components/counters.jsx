@@ -6,12 +6,12 @@ class Counters extends Component{
   state = {
     url:"https://picsum.photos/200/300/?random",
     counters:[
-      {id:1,value:0,url:"https://picsum.photos/id/237///300/300"},
-      {id:2,value:0,url:"https://picsum.photos/id/1003///300/300"},
-      {id:3,value:0,url:"https://picsum.photos/id/1012///300/300"},
-      {id:4,value:0,url:"https://picsum.photos/id/1027///300/300"},
-      {id:5,value:0,url:"http://placekitten.com///300/300"},
-      {id:5,value:0,url:"https://picsum.photos/id/431///300/300"}
+      {id:1,value:0,url:"https://source.unsplash.com/owFmHMC4QAI///300x300"},
+      {id:2,value:0,url:"https://source.unsplash.com/7uoMmzPd2JA///300x300"},
+      {id:3,value:0,url:"https://source.unsplash.com/Gv2t5q_LnwA///300x300"},
+      {id:4,value:0,url:"https://source.unsplash.com/zBbY7VaUiqU///300x300"},
+      {id:5,value:0,url:"https://source.unsplash.com/5INN0oj12u4///300x300"},
+      {id:5,value:0,url:"https://source.unsplash.com/wOGhHamMqLc///300x300"}
     ]
   };
   componentDidMount() {
@@ -35,8 +35,36 @@ class Counters extends Component{
     if(window.innerWidth < 400){
       console.log("hellasdasdo")
       const counters = [...this.state.counters];
-      counters.map(c =>  c.url=c.url.split("///")[0]+"/160/160")
+      counters.map(c =>  c.url=c.url.split("///")[0]+"/160x160")
       this.setState({counters});
+
+      navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
+        if(PermissionStatus.state == 'granted'){
+          var options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+                };
+
+                function success(pos) {
+                var crd = pos.coords;
+
+                console.log('Your current position is:');
+                console.log(`Latitude : ${crd.latitude}`);
+                console.log(`Longitude: ${crd.longitude}`);
+                console.log(`More or less ${crd.accuracy} meters.`);
+                altert(`Latitude,Longitude : ${crd.latitude},${crd.longitude}`)
+                }
+
+                function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+                }
+
+                navigator.geolocation.getCurrentPosition(success, error, options);
+        }else{
+            console.log(" permission is not allowed")
+        }
+    })
     }
 
   }
