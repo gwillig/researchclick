@@ -21,7 +21,7 @@
     -->
     <title>React App</title>
   </head>
-  <body onload="setSlider()">
+  <body onload="getCookie('csrftoken',setSlider)">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="cover">
         <p id="message">Thanks for your help</p>
@@ -39,25 +39,26 @@
     -->
   </body>
   <script>
-  setSlider = () => {
-    // 1.Step: Get the crftoken (https://docs.djangoproject.com/en/1.9/ref/csrf/)
-    function getCookie(name) {
-        var cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            var cookies = document.cookie.split(';');
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].trim();
-                // Does this cookie string begin with the name we want?
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-    }
-    var csrftoken = getCookie('csrftoken');
-    
+  // 1.Step: Get the crftoken (https://docs.djangoproject.com/en/1.9/ref/csrf/)
+  var csrftoken
+  function getCookie(name,callback) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      callback()
+  }
+   = getCookie('csrftoken');
+
+  sendAnswer = () => {
     setTimeout(function(){
     document.querySelector("#cover").style.zIndex=12
     document.querySelector("#message").style.color="black"
