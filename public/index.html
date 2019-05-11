@@ -21,7 +21,7 @@
     -->
     <title>React App</title>
   </head>
-  <body onload="getCookie('csrftoken',setSlider)">
+  <body onload="getCookie('csrftoken',sendAnswer)">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="cover">
         <p id="message">Thanks for your help</p>
@@ -54,9 +54,10 @@
               }
           }
       }
+      csrftoken = getCookie('csrftoken');
       callback()
   }
-   = getCookie('csrftoken');
+
 
   sendAnswer = () => {
     setTimeout(function(){
