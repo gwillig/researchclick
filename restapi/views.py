@@ -5,9 +5,11 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 from restapi.models import Choice
+from django.utils.decorators import method_decorator
 
 
-@csrf_exempt
+
+@method_decorator(csrf_exempt)
 def result(request):
     if request.method == "POST":
         data = request.body
@@ -25,5 +27,3 @@ def result(request):
     response = {'newTheme': "theme"}
 
     return JsonResponse(response)
-
-
