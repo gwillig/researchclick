@@ -5,6 +5,7 @@ class Counter extends Component{
   getBadgeClasses(){
     let classes = "badge m-2 ";
     classes += (this.props.counter.value === 0) ? "badge-warning" : "badge-primary";
+    classes +=" vote"
     return classes
   }
 
@@ -20,19 +21,10 @@ class Counter extends Component{
 
     return (
 
-            <div className="col-sm">
+            <div className="col-sm img_div">
               {this.props.children}
-              <p><img onClick={() => this.props.onIncrement(this.props.counter.value)}  src={this.props.url}></img></p>
+              <p><img  id={"img_id_"+this.props.counter.id} onClick={() => this.props.onIncrement(this.props.counter.value)}  src={this.props.url}></img></p>
               <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-              <button
-                  onClick={() => this.props.onIncrement(this.props.counter.value)}
-                  className="btn btn-secondary btn-sm"
-              >
-                Increment
-              </button>
-
-              <button onClick={this.props.onDelete} className="button btn-danger btn-sm m-2">Delete</button>
-
             </div>
            );
   }

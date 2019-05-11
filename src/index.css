@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.vote{
+  position: absolute;
+  z-index: 12;
+
+  top: 0%;
+  left: 3%;
+}
+
+/*Overwrite bootstrap styles  */
+.badge{
+  font-size: x-large;
+}

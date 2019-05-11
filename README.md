@@ -6,6 +6,12 @@ a is different in the click behavior of people dependent on day time
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Todo:
+First impression of a test candidate:
+* An introduction is need
+* The pariticments exepect a kind of a result after the experiment
+* Improve the avaliabily on mobile phones
+*
 ## Available Scripts
 
 In the project directory, you can run:
