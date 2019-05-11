@@ -39,6 +39,7 @@
     -->
   </body>
   <script>
+
   setSlider = () => {
 
     setTimeout(function(){
@@ -46,7 +47,6 @@
     document.querySelector("#cover").style.zIndex=12
     document.querySelector("#message").style.color="black"
     let response = {};
-    let test = {test:1}
 
     document.querySelectorAll("span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
@@ -60,7 +60,7 @@
     .then(function(res){ return res.json(); })
     .then(function(data){ alert( "Thanks for your help and have a nice day." ) })
 
-  },3000)
+  },15000)
   }
   </script>
 </html>
