@@ -68,7 +68,7 @@
     document.querySelectorAll("span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })
-    fetch("./response",
+    fetch("./response/",
     {   mode: 'cors',
         method: "POST",
         headers: {
