@@ -37,36 +37,7 @@ class Counters extends Component{
       const counters = [...this.state.counters];
       counters.map(c =>  c.url=c.url.split("///")[0]+"/160x160")
       this.setState({counters});
-
-      navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
-        if(PermissionStatus.state == 'granted'){
-          var options = {
-                enableHighAccuracy: true,
-                timeout: 5000,
-                maximumAge: 0
-                };
-
-                function success(pos) {
-                var crd = pos.coords;
-
-                console.log('Your current position is:');
-                console.log(`Latitude : ${crd.latitude}`);
-                console.log(`Longitude: ${crd.longitude}`);
-                console.log(`More or less ${crd.accuracy} meters.`);
-                alert(`Latitude,Longitude : ${crd.latitude},${crd.longitude}`)
-                }
-
-                function error(err) {
-                console.warn(`ERROR(${err.code}): ${err.message}`);
-                }
-
-                navigator.geolocation.getCurrentPosition(success, error, options);
-        }else{
-            console.log(" permission is not allowed")
-        }
-    })
     }
-
   }
 
   render(){

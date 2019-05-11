@@ -14,6 +14,8 @@ class Choice(models.Model):
     imag_4 = models.IntegerField(default=0)
     imag_4_url = models.CharField(max_length=90, blank=True, null=True)
     date = models.DateTimeField(default=timezone.now, blank=True, null=True)
-
+    note_1=models.TextField(blank=True, null=True)
+    note_2=models.TextField(blank=True, null=True)
+    note_3=models.TextField(blank=True, null=True)
     def __str__(self):
        return str(self.date)
