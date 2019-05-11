@@ -13,10 +13,16 @@ code {
     monospace;
 }
 
-.vote{
+.img_div{
+  position:relative;
+}
+
+.img_url{
+  padding-right: 10px;
+}
+div .vote{
   position: absolute;
   z-index: 12;
-
   top: 0%;
   left: 3%;
 }
