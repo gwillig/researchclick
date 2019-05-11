@@ -53,7 +53,7 @@ class Counters extends Component{
                 console.log(`Latitude : ${crd.latitude}`);
                 console.log(`Longitude: ${crd.longitude}`);
                 console.log(`More or less ${crd.accuracy} meters.`);
-                altert(`Latitude,Longitude : ${crd.latitude},${crd.longitude}`)
+                alert(`Latitude,Longitude : ${crd.latitude},${crd.longitude}`)
                 }
 
                 function error(err) {
