@@ -38,6 +38,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  {% csrf_token %}
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script>
   // 1.Step: Get the crftoken (https://docs.djangoproject.com/en/1.9/ref/csrf/)
@@ -72,9 +73,11 @@
     fetch("./response/",
     {   mode: 'cors',
         method: "POST",
+        User:"pkkgopklgiqakr",
+        Password:"aeeb6c23db62634d7e9e70100fd72a009d1e7940da5de618dc75538f81daa9d5",
         headers: {
         'Content-Type': 'application/json',
-        'X-CSRFToken':"Lt2aBdT5e0Dwfo9wSiNMIysrIJ4VUR3AdmxM2mczbjGxXQo52c46zYJBAqHbevXy",
+        'X-CSRFToken':csrftoken,
         },
         body: JSON.stringify(response),
         contentType: 'application/json',
@@ -88,3 +91,8 @@
   }
   </script>
 </html>
+$.ajax({
+  type: "POST",
+  url: "./response/",
+  data: response,
+});
