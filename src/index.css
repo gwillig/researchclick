@@ -8,6 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#note_div{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .countdown{
   font-size: x-large;
   font-weight: bold;
