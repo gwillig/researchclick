@@ -25,11 +25,11 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <span class="countdown" id="countdown">Countdown: <span>25</span> seconds</span>
     <div id="root"></div>
-    <div  id="note_input" class="input-group input-group-sm mb-3">
+    <div  id="note_div" class="input-group input-group-sm mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-sm">Note</span>
       </div>
-      <input type="text" class="form-control" aria-label="Note" aria-describedby="inputGroup-sizing-sm">
+      <input id="input_note" type="text" class="form-control" aria-label="Note" aria-describedby="inputGroup-sizing-sm">
     </div>
     <!--
       This HTML file is a template.
@@ -68,13 +68,15 @@
     setTimeout(function(){
     //1.Step: Get the number of click per image
     let response = {};
-    document.querySelectorAll("div span").forEach((element,i) => {
+    document.querySelectorAll("div[id=root] span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })
     //2.Step: Get the emotion
     dropdown_mood = document.getElementById("dropdown_mood");
     mood = dropdown_mood.options[dropdown_mood.selectedIndex].value;
     response["mood"] = mood;
+    //3.Step: Get the note
+    response["note"] = document.querySelector("#input_note").value;
     //3.Step: Send to database
     fetch("./response/",
     {   mode: 'cors',
