@@ -30,6 +30,6 @@ def result(request):
         mood   = ds["mood"],
         date   = time_now)
     newResponse.save()
-    print("11Fetch successfully saved to databank")
+    print("Fetch successfully saved to databank")
     response = {'Repsonse': "Answer successfully saved to databank"}
     return JsonResponse(response)
