@@ -21,5 +21,5 @@ from django.views.decorators.csrf import csrf_exempt
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('restapi.urls', 'restapi'), namespace='restapi')),
-    re_path('home', csrf_exempt(TemplateView.as_view(template_name='index.html'))),
+    re_path('.*', csrf_exempt(TemplateView.as_view(template_name='index.html'))),
 ]
