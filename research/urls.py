@@ -17,9 +17,9 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.urls import path,include
 from django.views.generic import TemplateView
-
+from django.views.decorators.csrf import csrf_exempt
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('response', include('restapi.urls')),
-    re_path('.*', TemplateView.as_view(template_name='index.html')),
+    path('', include(('restapi.urls', 'restapi'), namespace='restapi')),
+    re_path('home', csrf_exempt(TemplateView.as_view(template_name='index.html'))),
 ]

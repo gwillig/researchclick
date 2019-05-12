@@ -71,7 +71,7 @@
     document.querySelectorAll("span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })
-    fetch("./response/",
+    fetch("./response",
     {   mode: 'cors',
         method: "POST",
         User:"pkkgopklgiqakr",
@@ -91,11 +91,11 @@
   }
   </script>
 <script>
-$.ajax({
-  type: "POST",
-  url: "./response/",
-  data: response,
-});
+// $.ajax({
+//   type: "POST",
+//   url: "./response/",
+//   data: response,
+// });
 
 function getCookie(name) {
     var cookieValue = null;
@@ -112,7 +112,7 @@ function getCookie(name) {
     }
     return cookieValue;
 }
-// var csrftoken = getCookie('csrftoken');
+var csrftoken = getCookie('csrftoken');
 </script>
 
 </html>
