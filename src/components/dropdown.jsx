@@ -11,7 +11,7 @@ class Dropdown extends Component{
       {text:"Fear | Angst ",value:"fear"},
       {text:"Disgust | Ekel ",value:"disgust"},
       {text:"Angry | Wütend ",value:"angry"},
-  ],
+      ],
   }
   render(){
     return(
@@ -23,10 +23,7 @@ class Dropdown extends Component{
             ))}
           </select>
       </React.Fragment>
-
-
     )
   }
 }
-
 export default Dropdown;
