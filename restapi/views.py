@@ -7,8 +7,9 @@ from restapi.models import Choice
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
-@method_decorator(csrf_exempt)
-@csrf_exempt
+# @method_decorator(csrf_exempt)
+# @csrf_exempt
+@require_http_methods(['POST'])
 def result(request):
     data = request.body
     convert = data.decode("utf-8")
