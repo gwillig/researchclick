@@ -69,7 +69,7 @@
     //2.Step: Get the emotion
     dropdown_mood = document.getElementById("dropdown_mood");
     mood = dropdown_mood.options[dropdown_mood.selectedIndex].value;
-    response[mood] = mood;
+    response["mood"] = mood;
     //3.Step: Send to database
     fetch("./response/",
     {   mode: 'cors',
@@ -88,7 +88,7 @@
       alert( "Thanks for your help and have a nice day." );
       // window.location.assign("www.google.de");
    })
- },1500000)
+ },10000)
   }
   </script>
 </html>

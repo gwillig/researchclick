@@ -5,7 +5,7 @@ from restapi.models import Choice
 
 
 class PersonAdmin(admin.ModelAdmin):
-  list_display = ('date', 'note_1', 'note_2', 'note_3',"imag_1","imag_1_url")
+  list_display = ('date','mood', 'note_1', 'note_2', 'note_3',"imag_1","imag_1_url")
 
 
   def view_homepage_link(self, obj):

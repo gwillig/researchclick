@@ -27,7 +27,7 @@ def result(request):
         imag_4 = ds["3"][0], imag_4_url=ds["3"][1],
         imag_5 = ds["4"][0], imag_5_url=ds["4"][1],
         imag_6 = ds["5"][0], imag_6_url=ds["5"][1],
-        mood   = ds["value"],
+        mood   = ds["mood"],
         date   = time_now)
     newResponse.save()
     print("11Fetch successfully saved to databank")
