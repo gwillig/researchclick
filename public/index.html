@@ -19,13 +19,10 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>researchclick</title>
   </head>
   <body onload="getCookie('csrftoken',sendAnswer)">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="cover">
-        <p id="message">Thanks for your help</p>
-    </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -39,7 +36,7 @@
     -->
   </body>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  {% csrf_token %}
+
   <script>
 
   // 1.Step: Get the crftoken (https://docs.djangoproject.com/en/1.9/ref/csrf/)
@@ -64,10 +61,7 @@
 
   sendAnswer = () => {
     setTimeout(function(){
-    document.querySelector("#cover").style.zIndex=12
-    document.querySelector("#message").style.color="black"
     let response = {};
-
     document.querySelectorAll("span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })

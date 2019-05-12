@@ -23,12 +23,11 @@ class Counter extends Component{
 
             <div className="col-xs-2 img_div">
               {this.props.children}
-              <p><img className="img_url" id={"img_id_"+this.props.counter.id} onClick={() => this.props.onIncrement(this.props.counter.value)}  src={this.props.url}></img></p>
+              <p><img className="img_url" id={"img_id_"+this.props.counter.id} onClick={() => this.props.onIncrement(this.props.counter.value)}  src={this.props.url} alt={this.props.alt}></img></p>
               <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
             </div>
            );
   }
-
 
 
 }
