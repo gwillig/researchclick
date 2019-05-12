@@ -21,8 +21,9 @@
     -->
     <title>researchclick</title>
   </head>
-  <body onload="getCookie('csrftoken',sendAnswer)">
+  <body onload="getCookie('csrftoken',sendAnswer),start(20)">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <span class="countdown" id="countdown">Countdown: <span>20</span> seconds</span>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -36,7 +37,6 @@
     -->
   </body>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-
   <script>
 
   // 1.Step: Get the crftoken (https://docs.djangoproject.com/en/1.9/ref/csrf/)
@@ -89,6 +89,15 @@
       // window.location.assign("www.google.de");
    })
  },25000)
+  }
+  function start(counter){
+    if(counter >0){
+      setTimeout(function(){
+        counter--;
+        document.querySelector("#countdown").children[0].textContent = counter
+        start(counter);
+      }, 1000);
+    }
   }
   </script>
 </html>
