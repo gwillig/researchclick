@@ -71,7 +71,7 @@
     document.querySelectorAll("span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })
-    fetch("./response",
+    fetch("./response/",
     {   mode: 'cors',
         method: "POST",
         User:"pkkgopklgiqakr",
@@ -87,32 +87,8 @@
       alert( "Thanks for your help and have a nice day." );
       // window.location.assign("www.google.de");
    })
- },1500000)
+ },15000)
   }
   </script>
 <script>
-// $.ajax({
-//   type: "POST",
-//   url: "./response/",
-//   data: response,
-// });
-
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = jQuery.trim(cookies[i]);
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
-var csrftoken = getCookie('csrftoken');
-</script>
-
 </html>
