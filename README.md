@@ -11,7 +11,12 @@ First impression of a test candidate:
 * An introduction is need
 * The pariticments exepect a kind of a result after the experiment
 * Improve the avaliabily on mobile phones
-*
+
+
+## Used technologies
+* Python: Django
+* React
+* PostgesQL
 ## Available Scripts
 
 In the project directory, you can run:

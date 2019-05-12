@@ -17,7 +17,7 @@ class Dropdown extends Component{
     return(
       <React.Fragment>
           <select className="btn btn-secondary" id="dropdown_mood">
-          <option key="-1" value="None">"Stimmung | Mood"</option>
+          <option key="-1" value="None">Stimmung | Mood</option>
             {this.state.mood.map(element=>(
                 <option key={element.id} value={element.value}>{element.text}</option>
             ))}
