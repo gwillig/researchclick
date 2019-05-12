@@ -61,10 +61,16 @@
 
   sendAnswer = () => {
     setTimeout(function(){
+    //1.Step: Get the number of click per image
     let response = {};
     document.querySelectorAll("span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })
+    //2.Step: Get the emotion
+    dropdown_mood = document.getElementById("dropdown_mood");
+    mood = dropdown_mood.options[dropdown_mood.selectedIndex].value;
+    response[mood] = mood;
+    //3.Step: Send to database
     fetch("./response/",
     {   mode: 'cors',
         method: "POST",
@@ -82,7 +88,7 @@
       alert( "Thanks for your help and have a nice day." );
       // window.location.assign("www.google.de");
    })
- },15000)
+ },1500000)
   }
   </script>
 </html>
