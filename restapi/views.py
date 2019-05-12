@@ -5,7 +5,7 @@ from django.http import JsonResponse
 import json
 from restapi.models import Choice
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_http_methods
+from django.utils.decorators import method_decorator
 
 # @csrf_exempt
 @method_decorator(csrf_exempt)
