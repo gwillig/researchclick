@@ -63,7 +63,7 @@
     setTimeout(function(){
     //1.Step: Get the number of click per image
     let response = {};
-    document.querySelectorAll("span").forEach((element,i) => {
+    document.querySelectorAll("div span").forEach((element,i) => {
         response[i]=[parseInt(element.textContent),element.parentElement.children[0].children[0].src]
     })
     //2.Step: Get the emotion
