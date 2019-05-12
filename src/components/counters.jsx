@@ -45,7 +45,7 @@ class Counters extends Component{
     return (<div id="container_counters" className="container">
               <Dropdown></Dropdown>
               <button onClick={this.handleReset} className="btn btn-dark btn-sm m-2">Reset</button>
-              <Countdown date={Date.now() + 20000} />
+              <Countdown date={Date.now() + 25000}precision={3} /> {/*style is direct change for all span  tags in index.css*/}
               <div className="row">
               {this.state.counters.map(counter =>(
                 <Counter

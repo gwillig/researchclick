@@ -5,6 +5,10 @@
 #container_counters{
   z-index:0;
 }
+.countdown{
+  font-size: x-large;
+  font-weight: bold;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
