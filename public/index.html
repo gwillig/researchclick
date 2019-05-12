@@ -41,6 +41,7 @@
   {% csrf_token %}
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script>
+  {% csrf_token %}
   // 1.Step: Get the crftoken (https://docs.djangoproject.com/en/1.9/ref/csrf/)
   var csrftoken
   function getCookie(name,callback) {
@@ -91,8 +92,3 @@
   }
   </script>
 </html>
-$.ajax({
-  type: "POST",
-  url: "./response/",
-  data: response,
-});
