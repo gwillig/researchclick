@@ -36,7 +36,7 @@ class Counters extends Component{
     if(window.innerWidth < 400){
       console.log("hellasdasdo")
       const counters = [...this.state.counters];
-      counters.map(c =>  c.url=c.url.split("///")[0]+"/160x160")
+      counters.map(c =>  c.url=c.url.split("///")[0]+"/145x145")
       this.setState({counters});
     }
   }

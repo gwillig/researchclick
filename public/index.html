@@ -21,7 +21,7 @@
     -->
     <title>researchclick</title>
   </head>
-  <body onload="getCookie('csrftoken',sendAnswer),start(20)">
+  <body onload="getCookie('csrftoken',sendAnswer),start(25)">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <span class="countdown" id="countdown">Countdown: <span>20</span> seconds</span>
     <div id="root"></div>
@@ -91,6 +91,7 @@
  },25000)
   }
   function start(counter){
+    
     if(counter >0){
       setTimeout(function(){
         counter--;
