@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
 
 class Dropdown extends Component{
+  /*@description
+  @args
+  */
   // Based on Paul Ekman  six basic emotions (anger, disgust, fear, happiness, sadness, and surprise)
   //Source: https://www.researchgate.net/figure/a-Example-prototypical-expressions-of-six-basic-emotions-and-a-neutral-face-for-actor_fig2_10978419
   state={
