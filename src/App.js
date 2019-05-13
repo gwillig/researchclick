@@ -5,7 +5,9 @@ import Counters from './components/counters';
 
 
 class App extends Component {
-  "@description"
+  /*@description
+    @args
+    @return*/
   render() {
     return (
     <Router>
