@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Counters from './counters'
 
 class Welcome extends Component{
-
+  /*@description
+    @args
+    @return*/
   render(){
     return(
       <div>

@@ -7,6 +7,7 @@ class Counters extends Component{
   /*@description
   @args
   */
+  //// TODO: Add animation like https://youtu.be/r1ZtMCr0Pr4
   state = {
     url:"https://picsum.photos/200/300/?random",
     counters:[
