@@ -6,6 +6,7 @@ class Welcome extends Component{
   /*@description
     @args
     @return*/
+    //// TODO: Add welcome page with instruction
   render(){
     return(
       <div>
