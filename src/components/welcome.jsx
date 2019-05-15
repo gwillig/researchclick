@@ -7,6 +7,7 @@ class Welcome extends Component{
     @args
     @return*/
     //// TODO: Add welcome page with instruction
+    //// TODO: Add highchart.js: line chart shows the total amount of the participants
   render(){
     return(
       <div>
