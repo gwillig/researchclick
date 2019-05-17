@@ -9,7 +9,7 @@ class Welcome extends Component{
     //// TODO: Add welcome page with instruction
     //// TODO: Add highchart.js: line chart shows the total amount of the participants
     //// TODO: Add highchart.js: bar chart shows the total amount of the participants for each time of day
-    
+    //// TODO: Add mean, median, std for each image
   render(){
     return(
       <div>
