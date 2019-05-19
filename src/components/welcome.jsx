@@ -14,12 +14,12 @@ class Welcome extends Component{
     return(
       <div>
         <h2>Welcome</h2>
-        <p>
-          Hello participant,
-          The survey should only take 40 seconds, and your responses are completely anonymous.
-          If you have any questions about the survey, please email us: gustavwillig@gmail.com
-          We really appreciate your input!
-        </p>
+          <p>
+            Hello participant,
+            The survey should only take 40 seconds, and your responses are completely anonymous. <br/>
+            If you have any questions about the survey, please email us: gustavwillig@gmail.com <br/>
+            We really appreciate your input! <br/>
+          </p>
         <Link to={'/research'} >Start</Link>
       </div>
     )
