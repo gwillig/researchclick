@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-
-
 class Choice(models.Model):
     imag_1      = models.IntegerField(default=0)
     imag_1_url  = models.CharField(max_length=90,blank=True, null=True)
