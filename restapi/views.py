@@ -9,6 +9,7 @@ from django.utils.decorators import method_decorator
 from datetime import datetime
 from pytz import timezone
 
+
 @csrf_exempt
 def result(request):
     #1.Step: Get the information from the fetch body

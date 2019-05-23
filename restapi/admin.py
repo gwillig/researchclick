@@ -2,8 +2,6 @@ from django.contrib import admin
 from restapi.models import Choice
 # Register your models here.
 
-
-
 class PersonAdmin(admin.ModelAdmin):
   list_display = ('date','mood', 'note_1', 'note_2', 'note_3',"imag_1","imag_1_url")
 
