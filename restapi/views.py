@@ -9,9 +9,12 @@ from django.utils.decorators import method_decorator
 from datetime import datetime
 from pytz import timezone
 
-
 @csrf_exempt
 def result(request):
+    """
+    @description:
+        url for the rest-api to save the repsone form the participants
+    """
     #1.Step: Get the information from the fetch body
     data = request.body
     convert = data.decode("utf-8")
