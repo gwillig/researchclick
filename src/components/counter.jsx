@@ -2,6 +2,7 @@ import React, {Component} from "react";
 
 class Counter extends Component{
   /*@description
+  @args
   */
   getBadgeClasses(){
     let classes = "badge m-2 ";

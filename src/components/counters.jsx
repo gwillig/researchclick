@@ -4,6 +4,9 @@ import Dropdown from './dropdown'
 
 
 class Counters extends Component{
+  /*@description
+  @args
+  */
   state = {
     url:"https://picsum.photos/200/300/?random",
     counters:[
