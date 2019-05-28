@@ -1,7 +1,10 @@
 # Reasearch Project: Is there a correlation  what people click, mood and/or day time ?
 
 The goal of this project is to collect data to answer the question if there is
-a is different in the click behavior of people dependent on day time and or mood. This app is hosted on heroku, because the back-end is python based.
+a is different in the click behavior of people dependent on day time and or mood. 
+The analysis of the data will be done in a  Jupyter Note book. 
+
+This app is hosted on heroku, because the back-end is python based.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
