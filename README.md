@@ -2,7 +2,8 @@
 
 The goal of this project is to collect data to answer the question if there is
 a is different in the click behavior of people dependent on day time and or mood. 
-The analysis of the data will be done in a  Jupyter Note book. 
+The analysis of the data will be done in a Jupyter Note book. The first step of the 
+analysis is to determine if there is any correlation between the variables.
 
 This app is hosted on heroku, because the back-end is python based.
 
