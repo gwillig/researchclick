@@ -12,6 +12,7 @@ const options = {
   }]
 }
 
+
 const App = () => <div>
   <HighchartsReact
     highcharts={HighchartsReact}
