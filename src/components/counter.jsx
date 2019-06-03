@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 
 class Counter extends Component{
-  /*@description
-  @args
+  /*
+    @description:
+    Is the class for each image and
   */
   getBadgeClasses(){
     let classes = "badge m-2 ";

@@ -7,16 +7,12 @@ class Welcome extends Component{
     @args
     @return*/
     //// TODO: Add welcome page with instruction
-    //// TODO: Add highchart.js: line chart shows the total amount of the participants
-    //// TODO: Add highchart.js: bar chart shows the total amount of the participants for each time of day
-    //// TODO: Add mean, median, std for each image
   render(){
     return(
       <div>
-        <h2>Welcome</h2>
           <p>
-            Hello participant,
-            The survey should only take 40 seconds, and your responses are completely anonymous. <br/>
+            Hello participant,<br/>
+            The survey should only take <b>40</b> seconds, and your responses are completely anonymous. <br/>
             If you have any questions about the survey, please email us: gustavwillig@gmail.com <br/>
             We really appreciate your input! <br/>
           </p>
