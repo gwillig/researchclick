@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { render } from 'react-dom'
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import HighchartsReact from 'highcharts-react-official'
 
 const options = {
@@ -11,8 +11,6 @@ const options = {
     data: [1, 2, 3]
   }]
 }
-
-
 const App = () => <div>
   <HighchartsReact
     highcharts={HighchartsReact}
@@ -28,7 +26,7 @@ class Statistic extends Component{
     return(
       <div>
         <h2>Statistics</h2>
-
+        <Link to={'/research'} >Start</Link>
       </div>
     )
   }
