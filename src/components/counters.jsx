@@ -48,7 +48,7 @@ class Counters extends Component{
   render(){
     return (<div id="container_counters" className="container">
               <Dropdown></Dropdown>
-              <button onClick={this.handleReset} className="btn btn-dark btn-sm m-2">Reset</button>
+              <button  onClick={this.handleReset} className="btn btn-dark btn-sm m-2">Reset</button>
               <div className="row">
               {this.state.counters.map(counter =>(
                 <Counter

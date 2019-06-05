@@ -21,9 +21,9 @@
     -->
     <title>researchclick</title>
   </head>
-  <body onload="getCookie('csrftoken',sendAnswer),start(25)">
+  <body onload="getCookie('csrftoken',sendAnswer)">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <span class="countdown" id="countdown">Countdown: <span>25</span> seconds</span>
+    <span style="display: none;" class="countdown" id="countdown">Countdown: <span>25</span> seconds</span>
     <div id="root"></div>
     <div  id="note_div" class="input-group input-group-sm mb-3">
       <div class="input-group-prepend">
@@ -97,15 +97,6 @@
    })
  },25000)
   }
-  function start(counter){
 
-    if(counter >0){
-      setTimeout(function(){
-        counter--;
-        document.querySelector("#countdown").children[0].textContent = counter
-        start(counter);
-      }, 1000);
-    }
-  }
   </script>
 </html>
