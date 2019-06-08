@@ -9,6 +9,7 @@ class Counters extends Component{
   */
   //// TODO: Add animation like https://youtu.be/r1ZtMCr0Pr4
   state = {
+    countdown:60,
     url:"https://picsum.photos/200/300/?random",
     counters:[
       {id:1,value:0,url:"https://source.unsplash.com/owFmHMC4QAI///300x300",alt:"woman"},
@@ -20,12 +21,13 @@ class Counters extends Component{
     ]
   };
   componentDidMount() {
+     this.start()
      this.responsive_design()
    }
   handleIncrement = counter => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
-    console.log(index)
+    console.log(this)
     counters[index].value++
     this.setState({counters});
   }
@@ -45,11 +47,33 @@ class Counters extends Component{
     }
   }
 
+    start = () => {
+      const counter = this.state;
+      counter.countdown--
+      console.log(counter.countdown)
+
+      /*@description:
+      Is resposible for the countdown on welcome
+        @args
+          counter(int): is the time for count on the website
+        @return*/
+        //// TODO: Add welcome page with instruction
+        setTimeout(function(){console.log("hasd")
+          document.querySelector("#countdown").style.display ="";
+          document.querySelector("#countdown").children[0].textContent = counter.countdown;
+
+          counter.countdown = counter.countdown-10;
+          console.log("Hello")
+          this.setState({counter})
+          this.start()
+        }.bind(this),1000)
+
+  }
   render(){
     return (<div id="container_counters" className="container">
               <Dropdown></Dropdown>
-              <button  onClick={this.handleReset} className="btn btn-dark btn-sm m-2">Reset</button>
-              <div className="row">
+              <button onClick={this.handleReset} className="btn btn-dark btn-sm m-2">Reset</button>
+              <div   className="row">
               {this.state.counters.map(counter =>(
                 <Counter
                   key={counter.id}
