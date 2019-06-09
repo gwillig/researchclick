@@ -13,7 +13,7 @@ class Welcome extends Component{
       <div>
           <p>
             Hello participant,<br/>
-            The survey should only take <b>40</b> seconds, and your responses are completely anonymous. <br/>
+            The survey should only take <b>{this.props.countdown}</b> seconds, and your responses are completely anonymous. <br/>
             If you have any questions about the survey, please email us: gustavwillig@gmail.com <br/>
             We really appreciate your input! <br/>
           </p>

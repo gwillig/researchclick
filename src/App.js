@@ -9,13 +9,21 @@ class App extends Component {
   /*@description
     @args
     @return*/
+  state={
+    countdown:75
+  }
+
   render() {
     return (
     <Router>
 
           <Switch>
-              <Route exact path='/' component={Welcome} />
-              <Route path='/research' component={Counters} />
+              <Route exact path='/'
+               render={() => <Welcome countdown ={this.state.countdown} />}
+              />
+              <Route exact path='/research'
+               render={() => <Counters countdown ={this.state.countdown} />}
+              />
               <Route path='/statistic' component={Statistic} />
           </Switch>
 

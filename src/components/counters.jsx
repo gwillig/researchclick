@@ -9,7 +9,7 @@ class Counters extends Component{
   */
   //// TODO: Add animation like https://youtu.be/r1ZtMCr0Pr4
   state = {
-    countdown:60,
+    countdown:Object.assign(this.props.countdown),
     url:"https://picsum.photos/200/300/?random",
     counters:[
       {id:1,value:0,url:"https://source.unsplash.com/owFmHMC4QAI///300x300",alt:"woman"},
@@ -47,27 +47,23 @@ class Counters extends Component{
     }
   }
 
-    start = () => {
-      const counter = this.state;
-
-      console.log(counter.countdown)
-
+  start = () => {
       /*@description:
       Is resposible for the countdown on welcome
         @args
           counter(int): is the time for count on the website
         @return*/
         //// TODO: Add welcome page with instruction
-        setTimeout(function(){console.log("hasd")
+      const counter = this.state;
+      setTimeout(function(){console.log("hasd")
           document.querySelector("#countdown").style.display ="";
           document.querySelector("#countdown").children[0].textContent = counter.countdown;
-
           counter.countdown--;
-          this.setState({counter})
-          this.start()
+          this.setState({counter});
+          this.start();
         }.bind(this),1000)
-
   }
+
   render(){
     return (<div id="container_counters" className="container">
               <Dropdown></Dropdown>
