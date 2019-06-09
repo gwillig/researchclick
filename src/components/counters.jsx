@@ -49,7 +49,7 @@ class Counters extends Component{
 
     start = () => {
       const counter = this.state;
-      counter.countdown--
+
       console.log(counter.countdown)
 
       /*@description:
@@ -62,8 +62,7 @@ class Counters extends Component{
           document.querySelector("#countdown").style.display ="";
           document.querySelector("#countdown").children[0].textContent = counter.countdown;
 
-          counter.countdown = counter.countdown-10;
-          console.log("Hello")
+          counter.countdown--;
           this.setState({counter})
           this.start()
         }.bind(this),1000)
