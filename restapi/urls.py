@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('response/', views.result, name='result'),
+    path('getdata/', views.result, name='result'),
 ]

@@ -10,6 +10,9 @@ from datetime import datetime
 from pytz import timezone
 
 @csrf_exempt
+def getdata(request):
+    response = {'Repsonse': "Here is your data"}
+    return JsonResponse(response)
 def result(request):
     """
     @description:
