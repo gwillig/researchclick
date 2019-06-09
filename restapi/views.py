@@ -9,10 +9,13 @@ from django.utils.decorators import method_decorator
 from datetime import datetime
 from pytz import timezone
 
-@csrf_exempt
+
 def getdata(request):
     response = {'Repsonse': "Here is your data"}
-    return JsonResponse(response)
+    return HttpResponse('Hello, World!') 
+    # return JsonResponse(response)
+
+@csrf_exempt
 def result(request):
     """
     @description:

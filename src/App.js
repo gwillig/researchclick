@@ -24,7 +24,7 @@ class App extends Component {
               <Route exact path='/research'
                render={() => <Counters countdown ={this.state.countdown} />}
               />
-              <Route path='/statistic' component={Statistic} />
+              <Route exact path='/statistic' component={Statistic} />
           </Switch>
 
       </Router>

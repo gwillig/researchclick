@@ -21,8 +21,8 @@ class Counters extends Component{
     ]
   };
   componentDidMount() {
-     this.start()
-     this.responsive_design()
+     this.start();
+     this.responsive_design();
    }
   handleIncrement = counter => {
     const counters = [...this.state.counters];
