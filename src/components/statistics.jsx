@@ -51,28 +51,28 @@ class Statistic extends Component{
     }]
   }
 },
-    colChart:{
-    options: {
-    title: {
-      text: 'Records per day'
-    },
-    chart: {
-      type: "column",
-      zoomType: 'x',
-      backgroundColor:'#f8f9fae8',
-    },
-    xAxis: {
-    type: 'datetime',
-    },
-    series: [{
-        data: [
-            [1557266400000.0, 6],
-            [Date.UTC(1970, 11,  6), 0.25],
-            [Date.UTC(1970, 11, 20), 1.41],
-            [Date.UTC(1971, 11, 25), 1.64],
-          ]
-    }]
-    }
+colChart:{
+options: {
+title: {
+  text: 'Records per day'
+},
+chart: {
+  type: "column",
+  zoomType: 'x',
+  backgroundColor:'#f8f9fae8',
+},
+xAxis: {
+type: 'datetime',
+},
+series: [{
+    data: [
+        [1557266400000.0, 6],
+        [Date.UTC(1970, 11,  6), 0.25],
+        [Date.UTC(1970, 11, 20), 1.41],
+        [Date.UTC(1971, 11, 25), 1.64],
+      ]
+}]
+}
 }
   }
 
