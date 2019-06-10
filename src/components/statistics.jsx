@@ -152,7 +152,10 @@ render() {
         highcharts={Highcharts}
         options={this.state.lineChart.options}
       />
-
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={this.state.colChart.options}
+      />
     </div>
   );
 }
