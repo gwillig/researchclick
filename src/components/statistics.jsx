@@ -50,6 +50,29 @@ class Statistic extends Component{
           ]
     }]
   }
+},
+    colChart:{
+    options: {
+    title: {
+      text: 'Records per day'
+    },
+    chart: {
+      type: "column",
+      zoomType: 'x',
+      backgroundColor:'#f8f9fae8',
+    },
+    xAxis: {
+    type: 'datetime',
+    },
+    series: [{
+        data: [
+            [1557266400000.0, 6],
+            [Date.UTC(1970, 11,  6), 0.25],
+            [Date.UTC(1970, 11, 20), 1.41],
+            [Date.UTC(1971, 11, 25), 1.64],
+          ]
+    }]
+    }
 }
   }
 
@@ -90,7 +113,7 @@ componentDidMount(){
   })
       .catch(function(error) {
         console.log(error);
-        let data = {"all_records": 29, "pieChart": [{"name": null, "y": 22}, {"name": "happy", "y": 3}, {"name": "None", "y": 3}, {"name": "angry", "y": 1}], "lineChart": [[1557266400000.0, 6], [1557525600000.0, 3], [1557612000000.0, 18], [1560031200000.0, 2]]}
+        let data = {"all_records": 29, "pieChart": [{"name": null, "y": 22}, {"name": "happy", "y": 3}, {"name": "None", "y": 3}, {"name": "angry", "y": 1}], "lineChart": [[1557266400000.0, 6], [1557525600000.0, 3], [1557612000000.0, 18], [1560031200000.0, 2]], "colChart": [[1557266400000.0, 6.0], [1557525600000.0, 9.0], [1557612000000.0, 27.0], [1560031200000.0, 29.0]]}
         component.setState({
           pieChart:{options: {
             series: [{
@@ -100,6 +123,11 @@ componentDidMount(){
           lineChart:{options: {
             series: [{
               data: data.lineChart
+            }]
+          }},
+          colChart:{options: {
+            series: [{
+              data: data.colChart
             }]
           }}
 
@@ -119,7 +147,10 @@ render() {
         highcharts={Highcharts}
         options={this.state.lineChart.options}
       />
-
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={this.state.colChart.options}
+      />
     </div>
   );
 }

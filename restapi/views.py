@@ -11,7 +11,7 @@ from django.http import HttpResponse
 from pytz import timezone
 from django.db.models.functions import TruncDay
 from django.db.models import Count
-
+import pandas as pd
 
 
 
@@ -37,7 +37,10 @@ def getdata(request):
         proc_records_per_day.append([exp['day'].timestamp()*1000,exp['records']])
 
     data_dict["lineChart"]= proc_records_per_day
-
+    ##Cummulate
+    df = pd.DataFrame(proc_records_per_day)
+    df["cum"] = df[1].cumsum()
+    data_dict["colChart"]=df[[0,"cum"]].values.tolist()
 
     return JsonResponse(data_dict)
 
