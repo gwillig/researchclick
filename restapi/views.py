@@ -7,12 +7,13 @@ from restapi.models import Choice
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from datetime import datetime
+from django.http import HttpResponse 
 from pytz import timezone
 
 
 def getdata(request):
     response = {'Repsonse': "Here is your data"}
-    return HttpResponse('Hello, World!') 
+    return HttpResponse('Hello, World!')
     # return JsonResponse(response)
 
 @csrf_exempt
