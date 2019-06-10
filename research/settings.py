@@ -25,7 +25,7 @@ SECRET_KEY = '6j+tatczk+eht4g8d4pau_le4+ny#&w4e+0_$dtm%k+kgkm$uf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['researchclick.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['researchclick.herokuapp.com', '127.0.0.1','localhost']
 
 
 # Application definition
