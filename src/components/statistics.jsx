@@ -106,6 +106,11 @@ componentDidMount(){
             series: [{
               data: data.lineChart
             }]
+          }},
+          colChart:{options: {
+            series: [{
+              data: data.colChart
+            }]
           }}
 
         });
