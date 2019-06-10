@@ -10,7 +10,7 @@ class App extends Component {
     @args
     @return*/
   state={
-    countdown:75
+    countdown:25
   }
 
   render() {
