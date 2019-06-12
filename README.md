@@ -7,7 +7,9 @@ analysis is to determine if there is any correlation between the variables.
 The first step of the  analysis is to determine if there is any correlation between the variables.
 This app is hosted on heroku, because the back-end is python based.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The live version can be found under: researchclick.herokuapp.com 
+If you are interested in the data (only for research purpose) or would like to work on the app  feel free to contact gustavwillig@gmail.com. 
+
 
 ##Todo:
 First impression of a test candidate:
