@@ -12,10 +12,22 @@ from pytz import timezone
 
 
 def getdata(request):
-    response = {'Repsonse': "Here is your data"}
+    data_dict={}
     data_dict["all_records"] = Choice.objects.all().count()
-    # return HttpResponse('Hello, World!')
-    return JsonResponse(response)
+	#1.Step: Get all unique moods
+    moods_queryset = Choice.objects.values('mood').distinct()
+	#2.Step: count
+    mood_list =  moods_queryset.values_list('mood', flat=True)
+
+
+
+    data_dict["pieChart"]= []
+    for element in mood_list:
+        value_element = Choice.objects.filter(mood=element).count()
+        #Convert the response so that the response  is ready for highchart pie chart
+        data_dict["pieChart"].append({"name": element,"y": value_element})
+
+    return JsonResponse(data_dict)
 
 @csrf_exempt
 def result(request):
