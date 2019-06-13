@@ -38,9 +38,9 @@ componentDidMount(){
           contentType: 'application/json',
       })
       .then(function(data){
-        // that.setState({data_dict.response});
+
         console.log(data);
-        // that.setState(data_dict.response);
+        console.log("successfully")
         component.setState({
           options: {
             series: [{
