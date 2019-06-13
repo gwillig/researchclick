@@ -39,7 +39,8 @@ componentDidMount(){
       })
       .then(function(data){
 
-        console.log(data);
+        console.log("data: ",data);
+        console.log("data.pieChart: ",data.pieChart);
         console.log("successfully")
         component.setState({
           options: {
