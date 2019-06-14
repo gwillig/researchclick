@@ -37,8 +37,7 @@ componentDidMount(){
           'Accept': 'application/json'
           },
           contentType: 'application/json',
-      })
-      .then(function(data){
+      }).then(response => response.json()).then(function(data){
         // that.setState({data_dict.response});
         console.log(data);
         // that.setState(data_dict.response);
