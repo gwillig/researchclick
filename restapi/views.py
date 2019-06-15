@@ -10,7 +10,7 @@ from datetime import datetime
 from django.http import HttpResponse
 from pytz import timezone
 
-
+@csrf_exempt
 def getdata(request):
     data_dict={}
     data_dict["all_records"] = Choice.objects.all().count()
