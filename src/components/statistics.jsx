@@ -117,11 +117,6 @@ render() {
         highcharts={Highcharts}
         options={this.state.lineChart.options}
       />
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={this.state.pieChart.options}
-      />
-
 
     </div>
   );
