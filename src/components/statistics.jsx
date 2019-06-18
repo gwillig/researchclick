@@ -20,7 +20,8 @@ class Statistic extends Component{
         text: 'Sum of differnt moods'
       },
       chart: {
-        type: "pie"
+        type: "pie",
+        backgroundColor:'#f8f9fae8'
       },
       series: [{
           data: [1, 2, 3]
@@ -35,6 +36,7 @@ class Statistic extends Component{
     chart: {
       type: "line",
       zoomType: 'x',
+      backgroundColor:'#f8f9fae8'
     },
     xAxis: {
     type: 'datetime',
