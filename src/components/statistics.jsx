@@ -54,7 +54,7 @@ class Statistic extends Component{
 colChart:{
 options: {
 title: {
-  text: 'Records per day'
+  text: ' Cumulative sum of the records'
 },
 chart: {
   type: "column",
@@ -143,7 +143,7 @@ componentDidMount(){
 render() {
   return (
     <div>
-      <h2>Highcharts</h2>
+      <h2>Statistic</h2>
       <HighchartsReact
         highcharts={Highcharts}
         options={this.state.pieChart.options}
